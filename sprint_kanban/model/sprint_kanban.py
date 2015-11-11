@@ -10,7 +10,6 @@ class SprintKanban(osv.Model):
         return True
 
     def set_cancel(self, cr, uid, ids, context=None):
-
         self.write(cr, uid, ids, {'state': 'cancelled'}, context=context)
         return True
 

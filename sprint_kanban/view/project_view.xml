@@ -6,7 +6,7 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_search_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//filter[@string=&quot;Stage&quot;]" position="after">
+            <xpath expr="//filter[@name=&quot;Stage&quot;]" position="after">
                 <field name="sprint_id"/>
                 <filter string="Sprint" name="group_sprint_id" icon="terp-stage" domain="[]" context="{'group_by':'sprint_id'}"/>
             </xpath>
@@ -32,7 +32,7 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_kanban"/>
         <field name="arch" type="xml">
-            <xpath expr='//div[@class="oe_kanban_content"]/div/b/field[@name="name"]' position="before">
+            <xpath expr='//div[@class="oe_kanban_content"]/div/strong/field[@name="name"]' position="before">
                 <field name="id"/>
             </xpath>
         </field>
